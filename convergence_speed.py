@@ -1,5 +1,11 @@
 import numpy as np
+import matplotlib
+matplotlib.use('Agg')  # Non-interactive backend
 import matplotlib.pyplot as plt
+import os
+
+# Create graphs directory if it doesn't exist
+os.makedirs('graphs', exist_ok=True)
 
 np.random.seed(42)
 
@@ -52,4 +58,4 @@ plt.grid(True)
 
 plt.savefig('graphs/convergence_speed.png', dpi=300)
 
-plt.show()
+print("✓ Graph saved: graphs/convergence_speed.png")
